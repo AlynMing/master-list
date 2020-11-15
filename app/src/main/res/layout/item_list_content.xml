@@ -15,14 +15,14 @@
         android:paddingBottom="@dimen/_5sdp">
 
         <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:id="@+id/track_image"
             android:scaleType="centerCrop"
-            android:padding="5dp"
+            android:layout_margin="5dp"
             tools:src="@drawable/sample_image_large"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -30,60 +30,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingLeft="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_5sdp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toRightOf="@id/track_image"
             app:layout_constraintBottom_toBottomOf="parent">
 
             <TextView
-                android:id="@+id/track_name_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Track Name: "
-                android:paddingBottom="@dimen/_5sdp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                style="@style/TitleStyle"/>
-
-            <TextView
                 android:id="@+id/track_name_value"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/_200sdp"
                 android:layout_height="wrap_content"
-                android:text="Air Bud: Pup Star 1 (Pup Star)"
+                android:text="Star Trek VI: The Undiscovered Country"
                 android:paddingBottom="@dimen/_5sdp"
-                android:paddingRight="@dimen/_5sdp"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/track_name_label"
-                style="@style/ValueStyle"/>
-
-            <TextView
-                android:id="@+id/price_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Price:"
-                android:paddingBottom="@dimen/_5sdp"
-                android:paddingRight="@dimen/_5sdp"
-                app:layout_constraintTop_toBottomOf="@+id/track_name_label"
-                app:layout_constraintStart_toStartOf="parent"
-                style="@style/TitleStyle"/>
-
-            <TextView
-                android:id="@+id/price_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="12.99"
-                android:paddingBottom="@dimen/_5sdp"
-                app:layout_constraintTop_toBottomOf="@+id/track_name_value"
-                app:layout_constraintStart_toEndOf="@+id/price_label"
-                style="@style/ValueStyle"/>
-
-            <TextView
-                android:id="@+id/genre"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Genre:"
-                android:paddingRight="@dimen/_5sdp"
-                app:layout_constraintTop_toBottomOf="@id/price_label"
                 app:layout_constraintStart_toStartOf="parent"
                 style="@style/TitleStyle"/>
 
@@ -92,9 +50,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Kids &amp; Family"
-                app:layout_constraintTop_toBottomOf="@+id/price_value"
-                app:layout_constraintStart_toEndOf="@+id/genre"
+                android:paddingBottom="@dimen/_5sdp"
+                app:layout_constraintTop_toBottomOf="@+id/track_name_value"
+                app:layout_constraintStart_toStartOf="parent"
                 style="@style/ValueStyle"/>
+
+            <TextView
+                android:id="@+id/price_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$12.99"
+                app:layout_constraintTop_toBottomOf="@+id/genre_value"
+                app:layout_constraintStart_toStartOf="parent"
+                style="@style/TitleStyle"/>
+
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

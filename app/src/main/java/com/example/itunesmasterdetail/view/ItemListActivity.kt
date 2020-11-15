@@ -1,17 +1,16 @@
 package com.example.itunesmasterdetail.view
 
 import android.os.Bundle
-import android.util.Log
 import androidx.core.widget.NestedScrollView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.appcompat.widget.Toolbar
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.itunesmasterdetail.R
 
-import com.example.itunesmasterdetail.dummy.DummyContent
 import com.example.itunesmasterdetail.models.SearchResultDto
 
 /**
@@ -67,6 +66,12 @@ class ItemListActivity : AppCompatActivity() {
 
     private fun setupRecyclerView() {
         recyclerView = findViewById(R.id.item_list)
+        recyclerView.addItemDecoration(
+            DividerItemDecoration(
+                this,
+                LinearLayoutManager.VERTICAL
+            )
+        )
         adapter = SearchItemListAdapter(
             this,
             searchList,

@@ -6,7 +6,10 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.MenuItem
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.itunesmasterdetail.R
+import com.example.itunesmasterdetail.models.SearchResultDto
 
 /**
  * An activity representing a single Item detail screen. This
@@ -36,20 +39,19 @@ class ItemDetailActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             // Create the detail fragment and add it to the activity
             // using a fragment transaction.
-//            val fragment = ItemDetailFragment()
-//                .apply {
-//                arguments = Bundle().apply {
-//                    putString(
-//                        ItemDetailFragment.ARG_ITEM_ID,
-//                            intent.getStringExtra(ItemDetailFragment.ARG_ITEM_ID))
-//                }
-//            }
-
+            val searchItem = intent.getSerializableExtra(ItemDetailFragment.SEARCH_ITEM) as SearchResultDto.SearchItemDto
             val fragment = ItemDetailFragment()
+                .apply {
+                arguments = Bundle().apply {
+                    putSerializable(ItemDetailFragment.SEARCH_ITEM, searchItem)
+                }
+
+            }
 
             supportFragmentManager.beginTransaction()
                     .add(R.id.item_detail_container, fragment)
                     .commit()
+
         }
 
     }

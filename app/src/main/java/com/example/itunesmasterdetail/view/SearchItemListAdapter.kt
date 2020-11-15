@@ -76,7 +76,7 @@ class SearchItemListAdapter(private val parentActivity: ItemListActivity,
             Glide.with(view)
                 .load(searchItem.artworkUrl100)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .placeholder(R.drawable.ic_image_placeholder)
+                .placeholder(R.drawable.ic_placeholder_image)
                 .into(image)
 
             trackName.text = searchItem.trackName
