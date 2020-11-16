@@ -3,9 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/details_scrollview"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,10 +27,9 @@
             style="@style/DetailTitleStyle"
             android:layout_width="@dimen/_170sdp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="@dimen/_4sdp"
             android:paddingLeft="@dimen/_10sdp"
-            android:text="Star Trek Into Darkness"
-            android:textIsSelectable="true"
+            android:text="Star Trek VI: The Undiscovered Country"
             app:layout_constraintStart_toEndOf="@id/movie_poster_detail"
             app:layout_constraintBottom_toTopOf="@id/item_artist"
             tools:context=".view.ItemDetailFragment" />
@@ -45,7 +43,6 @@
             android:layout_marginBottom="@dimen/_10sdp"
             android:paddingLeft="@dimen/_10sdp"
             android:text="J.J. Abrams"
-            android:textIsSelectable="true"
             app:layout_constraintStart_toEndOf="@id/movie_poster_detail"
             app:layout_constraintBottom_toTopOf="@id/item_description"
             tools:context=".view.ItemDetailFragment" />
@@ -56,9 +53,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
-            android:padding="16dp"
+            android:padding="@dimen/_16sdp"
             android:text="Want a blast of motivation to start your day strong? This audiobook offers over two hours of motivational tips broken down into quick, memorable 1-4 minute segments bound to set your head in a new direction. You'll get 100 nuggets of Grant Cardone motivational mojo as he inspires you to shoot for the extraordinary and never ever settle. With over 100 ways to stay motivated delivered to you by the dynamic Grant Cardone, you'll blast through any barriers and achieve your dreams."
-            android:textIsSelectable="true"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/movie_poster_detail"
             tools:context=".view.ItemDetailFragment" />

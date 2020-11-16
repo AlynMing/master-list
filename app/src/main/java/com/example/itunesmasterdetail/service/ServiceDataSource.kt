@@ -7,6 +7,6 @@ interface ServiceDataSource {
 
     val resultsList: LiveData<List<SearchAPIListResponse.SearchResultItem>>
 
-    fun fetchList(options: Map<String, String>)
+    suspend fun fetchList(options: Map<String, String>)
 
 }

@@ -11,10 +11,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.itunesmasterdetail.R
-import com.example.itunesmasterdetail.dummy.DummyContent
 import com.example.itunesmasterdetail.models.SearchResultDto
 
-class SearchItemListAdapter(private val parentActivity: ItemListActivity,
+class SearchItemListAdapter(private val parentActivity: HomeActivity,
                             private val values: List<SearchResultDto.SearchItemDto>,
                             private val twoPane: Boolean) :
     RecyclerView.Adapter<SearchItemListAdapter.SearchItemViewHolder>() {
@@ -80,7 +79,7 @@ class SearchItemListAdapter(private val parentActivity: ItemListActivity,
                 .into(image)
 
             trackName.text = searchItem.trackName
-            priceValue.text = searchItem.trackPrice.toString()
+            priceValue.text = "$".plus(searchItem.trackPrice.toString())
             genre.text = searchItem.primaryGenreName
 
             with(itemView) {

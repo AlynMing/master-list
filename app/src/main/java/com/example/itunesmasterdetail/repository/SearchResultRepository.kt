@@ -9,8 +9,6 @@ interface SearchResultRepository {
 
     val searchRepositoryResult: LiveData<List<SearchResultDto.SearchItemDto>>
 
-    fun fetchITuneList(options: Map<String, String>)
-
-    fun fetchITuneList(options: Map<String, String>, context: Context)
+    suspend fun fetchITuneList(options: Map<String, String>)
 
 }

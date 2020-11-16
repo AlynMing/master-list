@@ -37,7 +37,7 @@
 
             <TextView
                 android:id="@+id/track_name_value"
-                android:layout_width="@dimen/_200sdp"
+                android:layout_width="@dimen/_60sdp"
                 android:layout_height="wrap_content"
                 android:text="Star Trek II: The Wrath of Khan"
                 android:paddingBottom="@dimen/_5sdp"

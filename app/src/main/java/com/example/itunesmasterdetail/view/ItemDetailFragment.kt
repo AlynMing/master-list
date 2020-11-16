@@ -1,28 +1,22 @@
 package com.example.itunesmasterdetail.view
 
-import android.graphics.Rect
 import android.os.Build
 import android.os.Bundle
-import android.text.TextUtils
 import androidx.fragment.app.Fragment
-import com.google.android.material.appbar.CollapsingToolbarLayout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toolbar
 import androidx.annotation.RequiresApi
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.itunesmasterdetail.R
-import com.example.itunesmasterdetail.dummy.DummyContent
 import com.example.itunesmasterdetail.models.SearchResultDto
-import org.w3c.dom.Text
 
 /**
  * A fragment representing a single Item detail screen.
- * This fragment is either contained in a [ItemListActivity]
+ * This fragment is either contained in a [HomeActivity]
  * in two-pane mode (on tablets) or a [ItemDetailActivity]
  * on handsets.
  */

@@ -1,23 +1,19 @@
 package com.example.itunesmasterdetail.service
 
 import com.example.githubuser.network.ConnectivityInterceptor
-import com.example.githubuser.network.LimitExceedInterceptorImpl
 import com.example.itunesmasterdetail.models.SearchAPIListResponse
+import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
-import retrofit2.http.Query
 import retrofit2.http.QueryMap
 
 interface Service {
 
-//     private val baseUrl: String = "https://itunes.apple.com/search?term=star&amp;country=au&amp;media=movie&amp;all"
-
     @GET("search")
-    fun getList(@QueryMap options: Map<String, String>): Call<SearchAPIListResponse>
+    suspend fun getList(@QueryMap options: Map<String, String>): SearchAPIListResponse
 
     companion object {
         operator fun invoke(
@@ -32,6 +28,7 @@ interface Service {
 
             return Retrofit.Builder()
                 .baseUrl("https://itunes.apple.com/")
+                .addCallAdapterFactory(CoroutineCallAdapterFactory())
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okClient)
                 .build().create(Service::class.java)

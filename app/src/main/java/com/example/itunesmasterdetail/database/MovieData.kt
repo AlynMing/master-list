@@ -6,9 +6,8 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "movie_table")
 data class MovieData(
-    @PrimaryKey @ColumnInfo(name = "artistId") val artistId: Int = 0,
+    @PrimaryKey @ColumnInfo(name = "trackId") val trackId: Int,
     @ColumnInfo(name = "collectionId") val collectionId: Int,
-    @ColumnInfo(name = "trackId") val trackId: Int,
     @ColumnInfo(name = "trackName") val trackName: String?,
     @ColumnInfo(name = "artworkUrl30") val artworkUrl30: String?,
     @ColumnInfo(name = "artworkUrl60") val artworkUrl60: String?,
